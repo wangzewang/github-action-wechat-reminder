@@ -18,7 +18,8 @@ jobs:
           pip install flake8 pytest
           if [ -f req.txt ]; then pip install -r req.txt; fi
 
-      - name: Run  script
+      
+      - shell: bash
         run: |
           python notion_remind.py
         env:
