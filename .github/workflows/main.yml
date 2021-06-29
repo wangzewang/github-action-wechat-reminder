@@ -1,7 +1,7 @@
 name: Schedule to send notification to wechat
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
 jobs:
   notion_remind:
     runs-on: ubuntu-latest
