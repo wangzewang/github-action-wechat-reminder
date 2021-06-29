@@ -8,7 +8,7 @@ notion_token = os.environ['NOTION_TOKEN_V2']
 notion_page = os.environ['NOTION_PAGE']
 server_token = os.environ['SERVER_TOKEN']
 
-client = NotionClient(token_v2=notion)
+client = NotionClient(token_v2=notion_token)
 page = client.get_block(notion_page)
 
 for remind in page.children:
