@@ -25,7 +25,7 @@ for remind in page.children:
         re_content = remind. _get_record_data()['properties']['title'][1][0]
         if now < start:
             duration = start - now
-            if duration.total_seconds() <= 300:
+            if duration.total_seconds() <= 600:
                 requests.get(f'https://sctapi.ftqq.com/{server_token}.send?title={start.humanize(now, locale="zh-cn")}&desp={re_content}')
     except:
         continue
